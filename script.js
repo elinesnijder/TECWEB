@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
     var imgs = document.querySelectorAll(".slider img");
     var dots = document.querySelectorAll(".dot");
     var currentImg = 0; // Index of the first image
