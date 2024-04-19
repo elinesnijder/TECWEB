@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+
+    function man() {
+      divElement = document.getElementById("TipoBebida");
+      if (document.getElementById("man").checked) {
+        // Adicionar label ou item list ao div
+        while (divElement.hasChildNodes()){
+          divElement.removeChild(divElement.lastChild);
+        }
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode("Cerveja");
+        node.appendChild(textnode);
+        divElement.appendChild(node);
+      }
+    }
+
+    function woman() {
+      divElement = document.getElementById("TipoBebida");
+      if (document.getElementById("woman").checked) {
+        // Adicionar label ou item list ao div
+        while (divElement.hasChildNodes()){
+          divElement.removeChild(divElement.lastChild);
+        }
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode("Vodka");
+        node.appendChild(textnode);
+        divElement.appendChild(node);
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <input type="radio" id="man" name="operacao" value="1" onclick="man()">
+  <label for="1">Homem</label><br/>
+  <input type="radio" id="woman" name="operacao" value="2" onclick="woman()">
+  <label for="2">Mulher</label><br/>
+  <br/>
+  <div id="TipoBebida"></div>
+
+</body>
+</html>

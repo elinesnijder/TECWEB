@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+<script type = "text/javascript" src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type = "text/javascript">
+$(init);
+function init(){
+$("li").hover(border, noBorder);
+} // end init
+function border(){
+$(this).css("border", "1px solid black");
+}
+function noBorder(){
+$(this).css("border", "0px none black"); 
+}
+</script>
+<title>hover.html</title>
+</head>
+<body>
+<h1>Hover Demo</h1>
+<ul>
+<li>alpha</li>
+<li>beta</li>
+<li>gamma</li>
+<li>delta</li>
+</ul>
+</body>
+</html>
