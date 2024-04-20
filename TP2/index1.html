@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
 </head>
 <body>
-    
     <div class="slider">
         <!--images-->
         <div class = "slider-items">
@@ -18,9 +17,27 @@
             <img src="img-2.jpg" alt="" class="slider-item">
             <img src="img-3.jpg" alt="" class="slider-item">
         </div>
+    
+        <!--control-->
+        <div class="slider-controls">
+            <span class="bx bxs-chevron-left prev" onclick="changeSlide(-1)"></span>
+            <span class="bx bxs-chevron-right next" onclick="changeSlide(1)"></span>
+        </div>
+
+        <!--slider indicator-->
+        <div class="slider-indicators">
+            <span onclick="moveTo(0)"></span>
+            <span onclick="moveTo(1)"></span>
+            <span onclick="moveTo(2)"></span>
+        </div>
+
+        <!--slider content-->
+        <div class="slider-content">
+            <h3>Ocean View</h3>
+            <h3>Green Valley</h3>
+            <h3>Lake Reflection</h3>
+        </div>
     </div>
-
-
     <!--js file-->
     <script src = "script1.js"></script>
 </body>
