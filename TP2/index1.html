@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ES Photography</title>
+    <title>Eline Snijder</title>
+
     <!--css file-->
     <link rel="stylesheet" href="style1.css">
     <!--icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="cookies" class="hidden">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="cookies">
+                    <p>Este site usa cookies para garantir que obtém a melhor experiência neste website. <br/> <a href="https://www.equitone.com/siteassets/documents/pt/cookies-completo-pt-2020.pdf?v=4939e4">Quero saber mais.</a></p>
+                    <button id="cookies-btn">Aceito</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+    
+    <div class="menu_links">
+        <a href="https://www.ualg.pt/">Home</a>
+        <a href="Enunciado.pdf">Sobre o Trabalho</a>
+        <a href="ReadMe.pdf">Manual de Instalação</a>
+        <a href="index.html">Produto final</a>
+    </div>
     <div class="slider">
         <!--images-->
-        <div class = "slider-items">
+        <div class="slider-items">
             <img src="img-1.jpg" alt="" class="slider-item">
             <img src="img-2.jpg" alt="" class="slider-item">
             <img src="img-3.jpg" alt="" class="slider-item">
         </div>
-    
+        
         <!--control-->
         <div class="slider-controls">
             <span class="bx bxs-chevron-left prev" onclick="changeSlide(-1)"></span>
@@ -33,12 +52,28 @@
 
         <!--slider content-->
         <div class="slider-content">
-            <h3>Ocean View</h3>
-            <h3>Green Valley</h3>
-            <h3>Lake Reflection</h3>
+            <h3 id="sliderContent1">Ocean View</h3>
+            <h3 id="sliderContent2">Green Valley</h3>
+            <h3 id="sliderContent3">Lake Reflection</h3>
         </div>
+        
     </div>
+    
+    <form id="textInputForm">
+        <label for="sliderText">Escolha qual texto deseja editar:</label>
+        <select id="textOption" name="textOption">
+            <option value="sliderContent1">Texto 1</option>
+            <option value="sliderContent2">Texto 2</option>
+            <option value="sliderContent3">Texto 3</option>
+        </select>
+        <br>
+        <label for="sliderText">Insira o novo texto:</label>
+        <input type="text" id="sliderText" name="sliderText">
+        <button type="submit">Alterar Texto</button>
+    </form>
+
     <!--js file-->
     <script src = "script1.js"></script>
+
 </body>
 </html>
