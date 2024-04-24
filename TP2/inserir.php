@@ -12,6 +12,18 @@ if (!file_exists("índex.html")) {
 ?>
 
 <?php
+// Recebe o valor do cookie enviado pelo cliente
+$cookieValue = $_COOKIE['cookieConsent'];
+
+// Registra o valor do cookie em um arquivo de log ou no banco de dados
+file_put_contents('cookie_log.txt', $cookieValue . PHP_EOL, FILE_APPEND);
+
+// Resposta opcional ao cliente
+echo "Cookie registrado com sucesso no servidor.";
+?>
+
+
+<?php
 // Verifica se o formulário foi enviado e se um arquivo foi selecionado
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
     // Diretório onde as imagens serão armazenadas

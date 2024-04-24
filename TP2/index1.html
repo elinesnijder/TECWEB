@@ -29,12 +29,14 @@
         <a href="ReadMe.pdf">Manual de Instalação</a>
         <a href="index.html">Produto final</a>
     </div>
+    
     <div class="slider">
         <!--images-->
         <div class="slider-items">
             <img src="img-1.jpg" alt="" class="slider-item">
             <img src="img-2.jpg" alt="" class="slider-item">
             <img src="img-3.jpg" alt="" class="slider-item">
+            <!-- Adicione um botão para baixar a imagem -->
         </div>
         
         <!--control-->
@@ -69,8 +71,12 @@
         <br>
         <label for="sliderText">Insira o novo texto:</label>
         <input type="text" id="sliderText" name="sliderText">
-        <button type="submit">Alterar Texto</button>
+        <button id="submitButton" type="submit">Download</button>
+        
+        <!-- Link de download oculto -->
+        <a id="downloadLink" style="display: none;" download="img-1.jpg"></a>
     </form>
+    
 
     <!--js file-->
     <script src = "script1.js"></script>

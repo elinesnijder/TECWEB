@@ -1,30 +1,3 @@
-$(document).ready(function() {
-    // Function to handle form submission
-    $('#textInputForm').submit(function(event) {
-        // Prevent default form submission
-        event.preventDefault();
-        
-        // Get the selected text option and the new text from the form
-        var selectedText = $('#textOption').val();
-        var newText = $('#sliderText').val();
-        
-        // AJAX POST request to send the data to the server
-        $.ajax({
-            type: 'POST',
-            url: 'inserir.php', // Replace 'update_text.php' with the URL of your server-side script
-            data: { textOption: selectedText, newText: newText },
-            success: function(response) {
-                // Handle successful response (if needed)
-                console.log('Text updated successfully!');
-            },
-            error: function(xhr, status, error) {
-                // Handle errors (if any)
-                console.error('Error:', error);
-            }
-        });
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     const setCookie = (cName, cValue, expdays) => {
         const date = new Date();
@@ -109,12 +82,3 @@ const showSlide = e => {
 
 // Chama a função showSlide com o índice inicial
 showSlide(index);
-
-// Manipulador de evento para alterar o texto no slider
-document.getElementById("textInputForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio do formulário
-    var selectedOption = document.getElementById("textOption").value;
-    var newSliderText = document.getElementById("sliderText").value;
-    document.getElementById(selectedOption).innerText = newSliderText;
-    });
-           

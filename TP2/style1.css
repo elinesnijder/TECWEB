@@ -84,6 +84,20 @@ body {
     background-color:rgb(99, 166, 255);
 }
 
+#downloadButton {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno (altura e largura) */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem externa */
+    cursor: pointer; /* Cursor ao passar por cima */
+    border-radius: 10px; /* Borda arredondada */
+    border: none; /* Remove a borda */
+}
+
 .menu_links {
     position: absolute;
     top: 0;
