@@ -9,12 +9,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0; /* Adicionei uma cor de fundo de fallback */
+    background-size: cover;
+    background:#000000;
 }
 
 .background {
-    background-image: url("img-1.jpg");
-    filter: blur(5px);
+    background-image: url("img-5.jpg");
+    background-size: cover;
+    filter: blur(2px);
     z-index: -1;
     position: fixed; /* Adicionei a propriedade position: fixed para garantir que a imagem de fundo seja posicionada corretamente */
     top: 0;
@@ -43,7 +45,7 @@ body {
 }
 
 .cookies a{
-    color:rgb(99, 166, 255);
+    color:rgb(210, 145, 113);
     font-weight: 500;
     text-decoration: none;    
 }
@@ -54,9 +56,9 @@ body {
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    border: 2px solid #b9b9b9;
+    background-color: rgb(0, 0, 0);
+    color: #b9b9b9;
 }
 
 .container-cookies {
@@ -65,13 +67,13 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background-color: #f8f9fa; /* Cor de fundo */
+    background-color: #000000; /* Cor de fundo */
     padding: 5px 5px; /* Espaçamento interno ajustado */
     border-radius: 10px;
     font-family: sans-serif;
     width: 55%; /* Reduzido o tamanho para 85% */
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    color: #b9b9b9;
+    background-color: rgb(0, 0, 0);
     z-index: 1;
 }
 
@@ -83,8 +85,9 @@ body {
 
 
 #cookies-btn:hover {
-    color: rgb(255, 255, 255);
-    background-color:rgb(99, 166, 255);
+    color: #000000;
+    background-color:rgb(210, 145, 113);
+    border: 2px solid #000000;
 }
 
 .menu_links {
@@ -92,27 +95,34 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f8f9fa; /* Cor de fundo */
+    background-color: #000000; /* Cor de fundo */
     padding: 10px 20px; /* Espaçamento interno */
     text-align: center; /* Alinhamento do texto */
     font-family: sans-serif;
 }
 
 .menu_links a {
-    color: #000000; /* Cor do texto */
+    color: #b9b9b9; /* Cor do texto */
     text-decoration: none; /* Sem sublinhado */
-    margin-right: 50px; /* Espaçamento entre os links */
+    margin-right: 70px; /* Espaçamento entre os links */
+    position: relative;
+    left: 25%;
 }
 
-.menu_links :hover{
-    color: rgb(0, 0, 0);
-    background-color: rgb(148, 148, 148);
+.menu_links a.first{
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+}
+
+.menu_links a:hover{
+    color: rgb(210, 145, 113);
+    background-color: #000000;
 }
 
 .menu_links a:last-child {
     margin-right: 0; /* Remove o espaçamento direito do último link */
 }
-
 
 .slider {
     position: relative;
@@ -123,6 +133,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(0, 0, 0); /* Cor de fundo do slider */
+    box-sizing: border-box;
 }
 
 .slider-item {
@@ -204,21 +215,26 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-.btn {
+.btn a{
     position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background-color: #ffffff;
+    background-color: rgb(0, 0, 0);
     padding: 10px 8px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: sans-serif;
     font-size: 15px;
     cursor: pointer;
+    text-decoration: none;
+    color:rgb(210, 145, 113);
+    border: 2px solid rgb(210, 145, 113);
 }
 
-.btn:hover{
-    background: #7cd474;
-    transition: background 1s;
+.btn a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(253, 186, 153, 0.688);
+    border: 2px solid rgba(253, 186, 153, 0.688);
+    transition: 1s;
 }
