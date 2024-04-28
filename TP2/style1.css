@@ -63,18 +63,19 @@ body {
 
 .container-cookies {
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     background-color: #000000; /* Cor de fundo */
-    padding: 5px 5px; /* Espaçamento interno ajustado */
+    padding: 20px 5px; /* Espaçamento interno ajustado */
     border-radius: 10px;
     font-family: sans-serif;
     width: 55%; /* Reduzido o tamanho para 85% */
     color: #b9b9b9;
     background-color: rgb(0, 0, 0);
     z-index: 1;
+    border: 2px solid rgb(210, 145, 113);
 }
 
 .cookies{
@@ -104,9 +105,9 @@ body {
 .menu_links a {
     color: #b9b9b9; /* Cor do texto */
     text-decoration: none; /* Sem sublinhado */
-    margin-right: 50px; /* Espaçamento entre os links */
+    margin-right: 40px; /* Espaçamento entre os links */
     position: relative;
-    left: 28%;
+    left: 35%;
 }
 
 .menu_links a.first{
@@ -207,7 +208,8 @@ body {
     bottom: 36px;
     color: rgb(236, 255, 255);
     font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition-duration: 1s;
