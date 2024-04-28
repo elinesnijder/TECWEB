@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 1000));
         const expires = "expires=" + date.toUTCString();
         document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+        console.log("Cookie definido:", cName, cValue); // Exibe uma mensagem no console quando o cookie é definido
+        updateStorage(); // Atualiza o armazenamento após definir o cookie
     }
 
     const getCookie = (cName) => {
@@ -15,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if(val.indexOf(name) === 0) value = val.substring(name.length);
         })
         return value;
+    }
+
+    const updateStorage = () => {
+        localStorage.setItem('capturedCookies', document.cookie); // Armazena os cookies capturados no localStorage
+        console.log("Cookies capturados:", document.cookie); // Exibe os cookies capturados no console
     }
 
     const cookies = document.getElementById("cookies");
@@ -80,5 +87,19 @@ const showSlide = e => {
     }
 };
 
-// Chama a função showSlide com o índice inicial
+// Define o intervalo de tempo para 2 segundos (2000 milissegundos)
+const intervalTime = 4000;
+
+// Função para avançar automaticamente os slides a cada 2 segundos
+const autoSlide = () => {
+    setInterval(() => {
+        changeSlide(1); // Avança para o próximo slide
+    }, intervalTime);
+};
+
+// Inicia a função para avançar automaticamente os slides
+autoSlide();
+
+// Mostra o primeiro slide ao carregar a página
 showSlide(index);
+

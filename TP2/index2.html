@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <form action="Get_Started.php" class="formulário" method="post" target="hidden_iframe">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="message">Mensagem:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+</body>
+</html>

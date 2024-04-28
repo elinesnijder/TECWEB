@@ -12,6 +12,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="logo" href=></a>
+        </nav>
+    </header>
+    <div class="background"></div>
     <div id="cookies" class="hidden">
         <div class="container">
             <div class="subcontainer">
@@ -22,7 +28,7 @@
             </div>    
         </div>
     </div>
-    
+
     <div class="menu_links">
         <a href="https://www.ualg.pt/">Home</a>
         <a href="Enunciado.pdf">Sobre o Trabalho</a>
@@ -36,7 +42,6 @@
             <img src="img-1.jpg" alt="" class="slider-item">
             <img src="img-2.jpg" alt="" class="slider-item">
             <img src="img-3.jpg" alt="" class="slider-item">
-            <!-- Adicione um botão para baixar a imagem -->
         </div>
         
         <!--control-->
@@ -59,24 +64,10 @@
             <h3 id="sliderContent3">Lake Reflection</h3>
         </div>
         
+    <div class="btn"><a href="index2.html">Message</a></div>
+
     </div>
-    
-    <form id="textInputForm">
-        <label for="sliderText">Escolha qual texto deseja editar:</label>
-        <select id="textOption" name="textOption">
-            <option value="sliderContent1">Texto 1</option>
-            <option value="sliderContent2">Texto 2</option>
-            <option value="sliderContent3">Texto 3</option>
-        </select>
-        <br>
-        <label for="sliderText">Insira o novo texto:</label>
-        <input type="text" id="sliderText" name="sliderText">
-        <button id="submitButton" type="submit">Download</button>
-        
-        <!-- Link de download oculto -->
-        <a id="downloadLink" style="display: none;" download="img-1.jpg"></a>
-    </form>
-    
+
 
     <!--js file-->
     <script src = "script1.js"></script>
