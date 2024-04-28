@@ -109,6 +109,7 @@ body {
     color: rgb(0, 0, 0);
     background-color: rgb(148, 148, 148);
 }
+
 .menu_links a:last-child {
     margin-right: 0; /* Remove o espaçamento direito do último link */
 }
@@ -129,6 +130,7 @@ body {
     display: flex;
     width: 100%;
     height: auto;
+    max-height: fit-content;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     background-size: cover;
