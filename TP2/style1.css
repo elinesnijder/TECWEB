@@ -10,7 +10,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0; /* Adicionei uma cor de fundo de fallback */
-    background-size: cover;
 }
 
 .background {
@@ -60,7 +59,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.container {
+.container-cookies {
     position: fixed;
     bottom: 30px;
     left: 50%;
