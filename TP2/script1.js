@@ -1,41 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const setCookie = (cName, cValue, expdays) => {
-        const date = new Date();
-        date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-        console.log("Cookie definido:", cName, cValue); // Exibe uma mensagem no console quando o cookie é definido
-        updateStorage(); // Atualiza o armazenamento após definir o cookie
-    }
-
-    const getCookie = (cName) => {
-        const name = cName + "=";
-        const cDecoded = decodeURIComponent(document.cookie);
-        const cArr = cDecoded.split("; ");
-        let value;
-        cArr.forEach(val => {
-            if(val.indexOf(name) === 0) value = val.substring(name.length);
-        })
-        return value;
-    }
-
-    const updateStorage = () => {
-        localStorage.setItem('capturedCookies', document.cookie); // Armazena os cookies capturados no localStorage
-        console.log("Cookies capturados:", document.cookie); // Exibe os cookies capturados no console
-    }
-
     const cookies = document.getElementById("cookies");
     const cookiesBtn = document.getElementById("cookies-btn");
 
     cookiesBtn.addEventListener("click", function() {
-        setCookie("cookieConsent", "accepted", 30); // Define o cookie como aceito por 30 dias
+        // Define o cookie no navegador do usuário
+        var date = new Date();
+        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // Expira em 30 dias
+        var expires = "expires=" + date.toUTCString();
+        document.cookie = "cookieConsent=accepted; " + expires + "; path=/";
+        console.log("Cookie definido: cookieConsent=accepted"); // Exibe uma mensagem no console quando o cookie é definido
         cookies.style.display = "none"; // Esconde a caixa de cookies após aceitar
     });
-
-    // Verifica se o cookie de consentimento já foi aceito
-    if (getCookie("cookieConsent") === "accepted") {
-        cookies.style.display = "none"; // Esconde a caixa de cookies se já foi aceito
-    }
 });
 
 let index = 0; // Start index at 0
