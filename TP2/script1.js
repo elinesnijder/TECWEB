@@ -7,8 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.cookie = "cookieConsent=accepted; path=/";
         console.log("Cookie definido: cookieConsent=accepted"); // Exibe uma mensagem no console quando o cookie é definido
         cookies.style.display = "none"; // Esconde a caixa de cookies após aceitar
+
+        // Acessa os cookies do PHP
+        console.log("Cookies do PHP:");
     });
 });
+
 let index = 0; // Start index at 0
 
 const moveTo = e => {
