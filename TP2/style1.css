@@ -70,7 +70,7 @@ body {
     width: 55%; /* Reduzido o tamanho para 85% */
     left: 50%; /* Posicionamento horizontal no meio */
     transform: translateX(-50%); /* Ajuste para centralizar horizontalmente */
-    bottom: 5%; /* Posicionamento na parte inferior */
+    bottom: 20px; /* Posicionamento na parte inferior */
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     z-index: 1;
@@ -130,7 +130,7 @@ body {
     display: flex;
     width: 100%;
     height: auto;
-    max-height: fit-content;
+    max-width: fit-content;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     background-size: cover;
