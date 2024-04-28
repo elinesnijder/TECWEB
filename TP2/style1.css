@@ -133,8 +133,6 @@ body {
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     background-size: cover;
-    box-sizing: border-box;
-
 }
 
 .slider-item:hover {
