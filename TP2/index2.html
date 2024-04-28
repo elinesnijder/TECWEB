@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <title>Formulário</title>
 </head>
 <body>
-    <form action="Get_Started.php" class="formulário" method="post" target="hidden_iframe">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <section>
+        <h2>Contato</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
 
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="message">Mensagem:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+            <input type="hidden" name="accessKey" value="db65c930-cc45-4038-9d32-36d4f7e523c1">
+            <input type="hidden" name="redirectTo" value="http://10.4.0.180/~a84785/TP2/obrigado.html">
+        </form>
+    </section>
 </body>
 </html>
