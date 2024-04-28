@@ -4,15 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cookiesBtn.addEventListener("click", function() {
         // Define o cookie no navegador do usuário
-        var date = new Date();
-        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // Expira em 30 dias
-        var expires = "expires=" + date.toUTCString();
-        document.cookie = "cookieConsent=accepted; " + expires + "; path=/";
+        document.cookie = "cookieConsent=accepted; path=/";
         console.log("Cookie definido: cookieConsent=accepted"); // Exibe uma mensagem no console quando o cookie é definido
         cookies.style.display = "none"; // Esconde a caixa de cookies após aceitar
     });
 });
-
 let index = 0; // Start index at 0
 
 const moveTo = e => {
