@@ -104,9 +104,9 @@ body {
 .menu_links a {
     color: #b9b9b9; /* Cor do texto */
     text-decoration: none; /* Sem sublinhado */
-    margin-right: 70px; /* Espaçamento entre os links */
+    margin-right: 50px; /* Espaçamento entre os links */
     position: relative;
-    left: 25%;
+    left: 28%;
 }
 
 .menu_links a.first{
@@ -146,7 +146,6 @@ body {
     transition-timing-function: ease-in-out;
     background-size: 150%;
 }
-
 
 .slider-item:hover {
     background-color: #000000; /* Reduz a opacidade ao passar o mouse */
