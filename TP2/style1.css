@@ -130,6 +130,7 @@ body {
     display: flex;
     width: 100%;
     height: auto;
+    min-width: 50%;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     background-size: cover;
