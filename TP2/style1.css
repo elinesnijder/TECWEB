@@ -117,7 +117,7 @@ body {
 .slider {
     position: relative;
     display: flex;
-    width: 100%; /* Alterado para ocupar toda a largura do container pai */
+    width: 70%; /* Alterado para ocupar toda a largura do container pai */
     max-width: 1100px; /* Definido um máximo de largura para o slider */
     height: 550px; /* Altura fixa do slider */
     border-radius: 10px;
@@ -129,7 +129,7 @@ body {
     position: absolute;
     display: flex;
     width: 100%;
-    height: auto; /* Ajustado para ocupar toda a altura do slider */
+    height: 100%; /* Ajustado para ocupar toda a altura do slider */
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
 }
